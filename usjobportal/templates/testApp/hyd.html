@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/demo.css'%}">
+</head>
+<body>
+<h1>HYD Related Jobs</h1>
+{% if job_list %}
+<table>
+    <thead>
+        <tr>
+            <th>date</th>
+            <th>company</th>
+            <th>title</th>
+            <th>eligibility</th>
+            <th>address</th>
+            <th>email</th>
+            <th>phone_number</th>
+
+        </tr>
+    </thead>
+    {% for hyd in job_list %}
+    <tr>
+        <td>{{hyd.date}}</td>
+        <td>{{hyd.company}}</td>
+        <td>{{hyd.title}}</td>
+        <td>{{hyd.eligibility}}</td>
+        <td>{{hyd.address}}</td>
+        <td>{{hyd.email}}</td>
+        <td>{{hyd.phone_number}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>NO Jobs found</p>
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,14 @@
+h1{background:red;
+text-align:center;
+color:white;
+}
+thead{
+    background: greenyellow;
+}
+table{
+    border: 2px blue groove;
+    margin: auto;
+}
+td{
+    border: 2px yellow groove;
+}
